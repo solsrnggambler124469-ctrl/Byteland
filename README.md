@@ -1,2 +1,0 @@
-# Byteland
-The Byteland website!
