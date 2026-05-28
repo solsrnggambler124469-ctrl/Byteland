@@ -1,9 +1,15 @@
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb(146, 157, 219);
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
+    overflow-x: hidden;
     color: rgb(30, 120, 194);
     background-color: rgb(17, 16, 16);
 }
@@ -37,12 +43,18 @@ nav a:hover {
     transition: 0.3s ease;
 }
 
+footer {
+    padding: 2rem 1.5rem 0;
+}
+
 header {
     margin-top: 10px;
-    height: auto;
+    min-height: 90px;
+    max-width: 100%;
     padding: 1rem 3%;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(35, 35, 41, 0.45);
@@ -65,11 +77,14 @@ header:hover {
     justify-items: center;
 }
 
-.welcome_video {
+.hero .welcome_video {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    object-fit: contain;
-    z-index: -1;
-    position: relative;
+    height: 100%;
+    object-fit: cover;
+    object-position: calc(center - 10%);
+    z-index: 0;
 }
 
 .Intro {
@@ -77,6 +92,45 @@ header:hover {
     color: aliceblue;
     border-color: black;
     border-radius: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* stacks on narrow screens */
+    gap: 2rem;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+.footer-column {
+    flex: 1 1 160px;
+    /* min 160 px, grows equally */
+    min-width: 140px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-top: 0.4rem;
+}
+
+.footer-column a {
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid currentColor;
+    padding: 1rem 0;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
 }
 
 .sep {
@@ -87,20 +141,16 @@ header:hover {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: large;
-    max-height: max-content;
-    max-width: max-content;
+    min-height: 15px;
     justify-content: center;
     color: aliceblue;
     border-radius: 12px;
     background-color: rgba(18, 41, 114, 0.548);
     backdrop-filter: blur(10px);
-    position: relative;
-    min-width: 500px;
-    max-height: 500px;
+    width: clamp(275px, 50vw, 500px);
+    padding: 2rem 1.5rem;
     transition: 0.3s ease;
     transform: scale(1);
-    position: absolute;
-    top: 280px;
 }
 
 .round_button:hover {
@@ -155,15 +205,15 @@ header:hover {
 }
 
 .large {
-    font-size: 60px;
+    font-size: clamp(1.75rem, 6vw, 4rem);
 }
 
 .medium {
-    font-size: 35px;
+    font-size: clamp(1.25rem, 4vw, 3rem);
 }
 
 .small {
-    font-size: 15px;
+    font-size: clamp(0.75rem, 2vw, 2rem);
 }
 
 .login_background {
@@ -208,6 +258,47 @@ header:hover {
     color: aliceblue;
 }
 
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: clamp(280px, 55vw, 680px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero h1 {
+    font-size: clamp(1.75rem, 6vw, 4rem);
+    line-height: 1.15;
+}
+
+.hero h4 {
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    max-width: 55ch;
+}
+
 .resultsDisplay {
     font-weight: bold;
     font-size: xx-large;
@@ -219,6 +310,18 @@ header:hover {
     height: 300px;
     width: 300px;
     border-radius: 50px;
+}
+
+.ex {
+    width: 90%;
+}
+
+.vertical_nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
 }
 
 #special-text {
@@ -233,111 +336,23 @@ header:hover {
     border-color: rgb(0, 0, 0);
 }
 
-#central_text {
-    max-height: max-content;
-    max-width: max-content;
-    justify-content: center;
-    max-width: 100%;
-    max-height: 100%;
-    display: inline-block;
-}
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.75rem 1rem;
+    }
 
-#bold_var_central {
-    color: rgb(255, 255, 255);
-    border-color: black;
-    border-radius: 12px;
-    font-size: 50px;
-    z-index: 1;
-}
+    nav {
+        width: 100%;
+    }
 
-#alternate_span_text {
-    background-image: linear-gradient(rgb(5, 49, 75), rgb(61, 48, 7));
-    color: transparent;
-    background-clip: text;
-    font-size: 50px;
-    transition: 0.3s ease;
-}
+    nav a {
+        padding: 0.4rem 0.35rem;
+    }
 
-#alternate_span_text:hover {
-    font-size: 60px;
-}
-
-#username,
-#password,
-#age_group,
-#email,
-#submit {
-    color: black;
-}
-
-#username::placeholder,
-#password::placeholder,
-#age_group::placeholder,
-#email::placeholder {
-    color: grey;
-}
-
-#search_box {
-    height: 50px;
-    width: 350px;
-    background-color: rgba(7, 7, 7, 0.507);
-    color: aliceblue;
-    border-radius: 15px;
-    transform: scale(1);
-    transition: 0.3s ease;
-}
-
-#search_box::placeholder {
-    color: aliceblue;
-}
-
-#search_box:hover {
-    transform: scale(1.15);
-}
-
-#search_image {
-    background-image: url("Images/search_icon.jpg");
-}
-
-#send_box {
-    height: 150px;
-    width: 900px;
-    position: relative;
-    color: aliceblue;
-    background-color: rgba(7, 7, 7, 0.507);
-    border-radius: 15px;
-    transform: scale(1);
-    transition: 0.3s ease;
-    margin-top: 0;
-    display: flex;
-}
-
-#send_box:hover {
-    transform: scale(1.005);
-    transition: 0.3s ease;
-}
-
-#send_box::placeholder {
-    color: aliceblue;
-}
-
-#send_button {
-    height: 75px;
-    width: 250px;
-    position: relative;
-    background-color: rgba(7, 7, 7, 0.507);
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 15px;
-    font-weight: bold;
-    color: aliceblue;
-    transform: scale(1);
-    transition: 0.3s ease;
-    align-items: center;
-    display: flex;
-}
-
-#send_button:hover {
-    transform: scale(1.0095);
-    transition: 0.3s ease;
+    .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }

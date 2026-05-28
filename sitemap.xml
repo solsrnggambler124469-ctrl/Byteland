@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+ 
+  <!-- Core Pages -->
+  <url>
+    <loc>https://byteland.online/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+ 
+  <url>
+    <loc>https://byteland.online/pages/home</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://byteland.online/pages/studio</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://byteland.online/pages/donate</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.4</priority>
+  </url>
+ 
+  <url>
+    <loc>https://byteland.online/pages/games</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>always</changefreq>
+    <priority>1.0</priority>
+  </url>
+ 
+  <url>
+    <loc>https://byteland.online/pages/contact</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.4</priority>
+  </url>
+ 
+  <!-- Legal -->
+  <url>
+    <loc>https://byteland.online/pages/privacy</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+ 
+  <url>
+    <loc>https://byteland.online/pages/terms/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+   <url>
+    <loc>https://byteland.online/enable.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+  <url>
+    <loc>https://byteland.online/index.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+  </url>
+ 
+</urlset>

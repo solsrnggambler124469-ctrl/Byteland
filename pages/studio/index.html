@@ -6,14 +6,18 @@
     <title>Byteland | "Powering the world of freedom and imagination you want!" </title>
     <link href="../../css/base.css" rel="stylesheet" />
     <link href="../../css/footer.css" rel="stylesheet" />
-    <script src="../../js/copyright.js"></script>
-    <meta name="viewport" content="width=device-width" />
+    <script src="../../js/copyright.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
 </head>
 
-<body>
-    <header>
-        <a href="index.html" id="logo" class="tween1">Byteland</a>
+<body id="body">
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=enable.html">
+    </noscript>
+
+    <header id="navigator">
+        <a href="../../index.html" id="logo" class="tween1">Byteland</a>
 
         <nav> <!-- Navigation bar!!!! -->
             <a href="../../pages/games/" target="_self" class="sep">Games &nbsp;</a>
@@ -21,27 +25,25 @@
             <a href="../../pages/contact/" target="_self" class="sep">&nbsp; Contact Us &nbsp;</a>
             <a href="../../pages/donate/" target="_self">&nbsp; Donate</a>
         </nav>
-
-        <noscript>
-            <meta http-equiv="refresh" content="0; url=../../enable.html">
-        </noscript>
     </header>
 
-    <div>
+    <section class="hero">
         <img class="welcome_video" src="../../images/background.png" />
-    </div>
 
-    <h1 class="Intro large" style="position: absolute; top: 51px;">Byteland Studio, the Heart of Byteland.</h1>
-    <h4 class="Intro small" style="position: absolute; top: 225px;">The technology which keeps on innovating.</h4>
-
-    <a href="studio-file/studio" download="BytelandStudio"><button class="round_button">Download Now</button></a>
+        <div class="hero-content">
+            <h1 class="Intro large">Byteland Studio, the <strong>Heart</strong> of Byteland</h1>
+            <h4 class="Intro small">The technology which simply keeps on innovating.</h4>
+            <a href="../studio/studio-file/Setup.exe" download="BytelandStudioSetup"><button class="round_button">Download Now</button></a>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-container">
             <!-- Column 1: Brand Info -->
             <div class="footer-column brand-info">
                 <h3>About Us</h3>
-                <p>Powering the world of freedom <br> and imagination you want, providing a fun way <br> to explore 3D game creation online for everyone <br> to enjoy and have fun with!</p>
+                <p>Powering the world of freedom and imagination you want, providing a fun way to explore 3D
+                    game creation online for everyone to enjoy and have fun with!</p>
             </div>
 
             <!-- Column 2: Quick Links -->

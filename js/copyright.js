@@ -26,6 +26,4 @@ function setYear() {
     element2.innerHTML = "".concat("(", joke, ")")
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    setYear()
-})
+setYear()
