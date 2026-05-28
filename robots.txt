@@ -1,0 +1,10 @@
+# All web crawlers
+User-agent: *
+Disallow: /admin/
+Disallow: /js/
+Disallow: /images/
+Disallow: /404.html/
+Disallow: /enable.html/
+
+# Sitemap location
+Sitemap: https://byteland.online/sitemap.xml
