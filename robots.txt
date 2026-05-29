@@ -1,8 +1,6 @@
 # All web crawlers
 User-agent: *
-Disallow: /admin/
-Disallow: /js/
-Disallow: /images/
+Disallow: /index.html/
 Disallow: /404.html/
 Disallow: /enable.html/
 

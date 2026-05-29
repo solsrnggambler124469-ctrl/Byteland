@@ -44,6 +44,7 @@ nav a:hover {
 }
 
 footer {
+    border-top: 1px solid #33333380;
     padding: 2rem 1.5rem 0;
 }
 
@@ -77,6 +78,11 @@ header:hover {
     justify-items: center;
 }
 
+.error_image {
+    height: clamp(275px, 50vw, 500px);
+    width: clamp(275px, 50vw, 500px);
+}
+
 .hero .welcome_video {
     position: absolute;
     inset: 0;
@@ -99,7 +105,7 @@ header:hover {
     flex-wrap: wrap;
     /* stacks on narrow screens */
     gap: 2rem;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-bottom: 2rem;
 }
 
@@ -279,7 +285,29 @@ header:hover {
     z-index: 1;
 }
 
+.games {
+    position: relative;
+    width: 100%;
+    min-height: clamp(280px, 55vw, 680px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    overflow: hidden;
+}
+
 .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.games-content {
     position: relative;
     z-index: 2;
     display: flex;
